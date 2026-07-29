@@ -1,93 +1,96 @@
-# 🚀 Arc Storage Contract
+# Arc Storage Contract
 
-A simple smart contract built with Solidity and Foundry, successfully deployed on the Arc Testnet.
+A simple Storage smart contract built with Solidity and Foundry.
 
-This project was created as part of my Web3 builder journey to understand smart contract development, deployment, and on-chain interactions.
+## Overview
 
----
+This project demonstrates the basics of Solidity smart contract development on the Arc Testnet.
 
-## ✨ Features
+The contract allows users to:
 
-- Store a uint256 value on-chain
-- Update the value using setNumber()
-- Read the stored value using getNumber()
-- Deploy using Foundry scripts
+- Store a number on-chain
+- Update the stored number
+- Read the current stored number
 
----
+## Tech Stack
 
-## 🛠 Tech Stack
-
-- Solidity ^0.8.20
+- Solidity
 - Foundry
 - Arc Testnet
 
----
-
-## 📂 Project Structure
+## Project Structure
 
 copy
 
 
-src/
- └── Storage.sol
+arc-storage-contract/
+├── src/
+│   └── Storage.sol
+├── script/
+│   └── DeployStorage.s.sol
+├── test/
+│   └── HelloArchitect.t.sol
+├── lib/
+├── foundry.toml
+└── README.md
+## Smart Contract
 
-script/
- └── DeployStorage.s.sol
+### Storage.sol
 
-test/
- └── HelloArchitect.t.sol
----
+State Variable
 
-## 📜 Smart Contract
+- uint256 public number
 
-### Functions
+Functions
 
-Solidity (Ethereum)
-
-
-setNumber(uint256 _number)
-Updates the stored value.
+### setNumber(uint256 _number)
 
-Solidity (Ethereum)
-
-
-getNumber()
-Returns the current stored value.
+Updates the stored number.
 
----
+### getNumber()
 
-## 🌐 Deployment
+Returns the current stored number.
 
-Network: Arc Testnet
+## Deployment
 
-Contract Address:
+Network
+
+- Arc Testnet
+
+Contract Address
 
 copy
 
 
 0xB4515c287BA17aB346526574FA2c0E279396E4bd
----
+## Build
 
-## 📚 What I Learned
+Bash
+
+
+forge build
+## Deploy
 
-- Solidity basics
-- State variables
-- Functions
-- Getter & Setter
-- Foundry workflow
-- Smart contract deployment
-- On-chain transactions
+Bash
+
+
+forge script script/DeployStorage.s.sol:DeployStorage \
+--rpc-url $RPC_URL \
+--private-key $PRIVATE_KEY \
+--broadcast
+## Security
 
----
+Sensitive files are excluded from Git tracking.
 
-## 🎯 Next Goals
+Ignored files include:
 
-- ERC-20 Token
-- ERC-721 NFT
-- Voting Contract
-- Crowdfunding DApp
-- Full-stack Web3 Application
+- .env
+- broadcast/
+- cache/
+- out/
 
----
+Never commit private keys or wallet secrets.
 
-Built with ❤️ while learning Web3 development.
+## Author
+
+GitHub: https://github.com/itsabhishekgup
