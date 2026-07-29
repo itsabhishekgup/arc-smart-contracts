@@ -1,18 +1,20 @@
 # Arc Storage Contract
 
-A simple Storage smart contract built with Solidity and Foundry.
+A simple storage smart contract built with Solidity and Foundry on the Arc Testnet.
 
 ## Overview
 
-This project demonstrates the basics of Solidity smart contract development on the Arc Testnet.
+This project demonstrates a basic Solidity smart contract that stores and retrieves a number on-chain.
 
-The contract allows users to:
+Features:
 
-- Store a number on-chain
-- Update the stored number
-- Read the current stored number
+- Store a uint256 value
+- Update the stored value
+- Read the current stored value
+- Deploy using Foundry
+- Tested on Arc Testnet
 
-## Tech Stack
+## Technology
 
 - Solidity
 - Foundry
@@ -32,24 +34,25 @@ arc-storage-contract/
 │   └── HelloArchitect.t.sol
 ├── lib/
 ├── foundry.toml
+├── .gitignore
 └── README.md
 ## Smart Contract
 
-### Storage.sol
+### State Variable
 
-State Variable
+Solidity (Ethereum)
+
+
+uint256 public number;
+### Functions
 
-- uint256 public number
+#### setNumber(uint256 _number)
 
-Functions
+Stores a new number.
 
-### setNumber(uint256 _number)
+#### getNumber()
 
-Updates the stored number.
-
-### getNumber()
-
-Returns the current stored number.
+Returns the stored number.
 
 ## Deployment
 
@@ -78,19 +81,31 @@ forge script script/DeployStorage.s.sol:DeployStorage \
 --rpc-url $RPC_URL \
 --private-key $PRIVATE_KEY \
 --broadcast
-## Security
+## Repository Security
 
-Sensitive files are excluded from Git tracking.
-
-Ignored files include:
+The following files and folders are excluded from Git:
 
 - .env
 - broadcast/
 - cache/
 - out/
 
-Never commit private keys or wallet secrets.
+Private keys and wallet secrets should never be committed.
+
+## Future Improvements
+
+- Unit tests
+- Events
+- Ownership
+- Access control
+- Gas optimization
 
 ## Author
 
-GitHub: https://github.com/itsabhishekgup
+GitHub
+
+https://github.com/itsabhishekgup
+
+---
+
+Built with Solidity and Foundry.
