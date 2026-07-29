@@ -50,6 +50,19 @@ forge script script/DeployStorage.s.sol:DeployStorage \
 --private-key $PRIVATE_KEY \
 --broadcast
 ```
+
+## Deployment
+
+Network: Arc Testnet
+
+```Contract Address
+
+0xB4515c287BA17aB346526574FA2c0E279396E4bd
+```
+```Explorer
+
+https://testnet.arcscan.app/address/0xB4515c287BA17aB346526574FA2c0E279396E4bd
+```
 ## Next Goal
 
 - Learn events
