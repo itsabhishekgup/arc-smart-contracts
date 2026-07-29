@@ -1,111 +1,62 @@
 # Arc Storage Contract
 
-A simple storage smart contract built with Solidity and Foundry on the Arc Testnet.
+My first Solidity smart contract built on Arc Testnet using Foundry.
 
-## Overview
+## About
 
-This project demonstrates a basic Solidity smart contract that stores and retrieves a number on-chain.
+Today I built a simple Storage contract as part of my Solidity learning journey.
 
-Features:
+This project can:
 
-- Store a uint256 value
-- Update the stored value
-- Read the current stored value
-- Deploy using Foundry
-- Tested on Arc Testnet
+- Store a number
+- Update the number
+- Read the stored number
 
-## Technology
+## What I did today
 
-- Solidity
-- Foundry
-- Arc Testnet
+- Created my first Storage smart contract
+- Wrote setter and getter functions
+- Compiled the contract using Foundry
+- Created a deployment script
+- Successfully deployed it on Arc Testnet
+- Learned how deployment works
+- Uploaded the project to GitHub
+- Secured the repository by ignoring .env and other sensitive files
 
-## Project Structure
+## Files
 
-copy
-
-
-arc-storage-contract/
-├── src/
-│   └── Storage.sol
-├── script/
-│   └── DeployStorage.s.sol
-├── test/
-│   └── HelloArchitect.t.sol
-├── lib/
-├── foundry.toml
-├── .gitignore
-└── README.md
-## Smart Contract
+- `src/Storage.sol` – Smart contract
+- `script/DeployStorage.s.sol` – Deployment script
+- `test/HelloArchitect.t.sol` – Test file
 
-### State Variable
+## Contract Address
 
-Solidity (Ethereum)
-
-
-uint256 public number;
-### Functions
+Arc Testnet
 
-#### setNumber(uint256 _number)
-
-Stores a new number.
-
-#### getNumber()
-
-Returns the stored number.
-
-## Deployment
-
-Network
-
-- Arc Testnet
-
-Contract Address
-
-copy
-
-
 0xB4515c287BA17aB346526574FA2c0E279396E4bd
-## Build
 
-Bash
-
-
+## Commands
+
+Build
+
+```Bash
 forge build
-## Deploy
+```
+Deploy
 
-Bash
-
-
+```Bash
 forge script script/DeployStorage.s.sol:DeployStorage \
 --rpc-url $RPC_URL \
 --private-key $PRIVATE_KEY \
 --broadcast
-## Repository Security
+```
+## Next Goal
 
-The following files and folders are excluded from Git:
-
-- .env
-- broadcast/
-- cache/
-- out/
-
-Private keys and wallet secrets should never be committed.
-
-## Future Improvements
-
-- Unit tests
-- Events
-- Ownership
-- Access control
-- Gas optimization
-
-## Author
-
-GitHub
-
-https://github.com/itsabhishekgup
+- Learn events
+- Write better tests
+- Build a Counter contract
+- Build a Todo contract
 
 ---
 
-Built with Solidity and Foundry.
+This project is part of my Web3 and Solidity learning journey.
