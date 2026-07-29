@@ -18,3 +18,15 @@ docs/
 .env
 .env.*
 !.env.example
+
+# Secrets
+.env
+.env.*
+
+# Foundry outputs
+broadcast/
+cache/
+out/
+
+# VS Code
+.vscode/
