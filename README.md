@@ -55,27 +55,27 @@ Status:
 - ✅ Deployed on Arc Testnet
 
 Contract Address
-
+```
 ## 0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
-
-# Project Structure
-
-.
+```
+## 📁 Project Structure
+```
+arc-smart-contracts/
 ├── src/
-│ ├── Storage.sol
-│ └── Greeting.sol
+│   ├── Storage.sol
+│   └── Greeting.sol
 │
 ├── script/
-│ ├── DeployStorage.s.sol
-│ └── DeployGreeting.s.sol
+│   ├── DeployStorage.s.sol
+│   └── DeployGreeting.s.sol
 │
 ├── test/
-│ ├── HelloArchitect.t.sol
-│ └── Greeting.t.sol
+│   ├── HelloArchitect.t.sol
+│   └── Greeting.t.sol
 │
 ├── README.md
 └── foundry.toml
-
+```
 ---
 
 # Run Locally
