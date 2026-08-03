@@ -1,75 +1,155 @@
-# Arc Storage Contract
+# Arc Smart Contracts
 
-My first Solidity smart contract built on Arc Testnet using Foundry.
-
-## About
-
-Today I built a simple Storage contract as part of my Solidity learning journey.
-
-This project can:
-
-- Store a number
-- Update the number
-- Read the stored number
-
-## What I did today
-
-- Created my first Storage smart contract
-- Wrote setter and getter functions
-- Compiled the contract using Foundry
-- Created a deployment script
-- Successfully deployed it on Arc Testnet
-- Learned how deployment works
-- Uploaded the project to GitHub
-- Secured the repository by ignoring .env and other sensitive files
-
-## Files
-
-- `src/Storage.sol` – Smart contract
-- `script/DeployStorage.s.sol` – Deployment script
-- `test/HelloArchitect.t.sol` – Test file
-
-## Contract Address
-
-Arc Testnet
-
-0xB4515c287BA17aB346526574FA2c0E279396E4bd
-
-## Commands
-
-Build
-
-```Bash
-forge build
-```
-Deploy
-
-```Bash
-forge script script/DeployStorage.s.sol:DeployStorage \
---rpc-url $RPC_URL \
---private-key $PRIVATE_KEY \
---broadcast
-```
-
-## Deployment
-
-Network: Arc Testnet
-
-```Contract Address
-
-0xB4515c287BA17aB346526574FA2c0E279396E4bd
-```
-```Explorer
-
-https://testnet.arcscan.app/address/0xB4515c287BA17aB346526574FA2c0E279396E4bd
-```
-## Next Goal
-
-- Learn events
-- Write better tests
-- Build a Counter contract
-- Build a Todo contract
+A collection of smart contracts built on Arc Testnet using Solidity and Foundry as part of my Web3 builder journey.
 
 ---
 
-This project is part of my Web3 and Solidity learning journey.
+## About
+
+This repository documents my progress as I learn and build smart contracts on Arc Testnet. Every project includes source code, deployment scripts, tests, and GitHub commits to showcase consistent development.
+
+My goal is to become a professional smart contract developer by building practical Web3 applications and improving with every project.
+
+---
+
+## Tech Stack
+
+- Solidity
+- Foundry
+- Arc Testnet
+- Git
+- GitHub
+
+---
+
+# Smart Contracts
+
+## ✅ Storage Contract
+
+### Features
+
+- Store a number
+- Update the stored number
+- Read the stored number
+
+Status:
+
+- ✅ Tested
+- ✅ Built
+- ✅ Deployed on Arc Testnet
+
+---
+
+## ✅ Greeting Contract
+
+### Features
+
+- Store a greeting message
+- Read the greeting
+- Update the greeting
+
+Status:
+
+- ✅ Tested
+- ✅ Built
+- ✅ Deployed on Arc Testnet
+
+Contract Address
+
+## 0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
+
+# Project Structure
+
+.
+├── src/
+│ ├── Storage.sol
+│ └── Greeting.sol
+│
+├── script/
+│ ├── DeployStorage.s.sol
+│ └── DeployGreeting.s.sol
+│
+├── test/
+│ ├── HelloArchitect.t.sol
+│ └── Greeting.t.sol
+│
+├── README.md
+└── foundry.toml
+
+---
+
+# Run Locally
+
+Clone the repository
+
+git clone https://github.com/itsabhishekgup/arc-smart-contracts.git
+Enter the project
+
+cd arc-smart-contracts
+Install dependencies
+
+forge install
+Run tests
+
+forge test
+Build contracts
+
+forge build
+Deploy
+
+forge create src/Greeting.sol:Greeting \
+--rpc-url $ARC_TESTNET_RPC_URL \
+--private-key $PRIVATE_KEY \
+--broadcast
+
+---
+
+# Learning Progress
+
+Completed
+
+- ✅ Storage Contract
+- ✅ Greeting Contract
+
+Coming Next
+
+- ⏳ Counter Contract
+- ⏳ Escrow Contract
+- ⏳ Vault Contract
+- ⏳ ERC20 Token
+- ⏳ ERC721 NFT
+- ⏳ Lottery
+- ⏳ MultiSig Wallet
+- ⏳ Voting Contract
+
+---
+
+# Goals
+
+- Learn Solidity fundamentals
+- Build production-style smart contracts
+- Master Foundry workflow
+- Deploy contracts on Arc Testnet
+- Maintain a professional GitHub portfolio
+
+---
+
+# Author
+
+Abhishek Gupta
+
+GitHub
+
+https://github.com/itsabhishekgup
+
+X (Twitter)
+
+https://x.com/itsabhishekgup
+
+LinkedIn
+
+https://www.linkedin.com/in/abhishek-gupta-882352301/
+
+---
+
+⭐ This repository is actively maintained as I continue building and learning on Arc Testnet.
