@@ -58,6 +58,35 @@ Contract Address
 ```
 ## 0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
 ```
+---
+# 🪙 MyToken Contract
+
+A simple ERC20-like token built using Solidity and deployed on Arc Testnet.
+
+## Features
+
+- Mint initial supply
+- Transfer tokens
+- Mint new tokens (Owner only)
+- Burn tokens
+- Balance tracking
+
+## Tech Stack
+
+- Solidity ^0.8.20
+- Foundry
+- Arc Testnet
+
+## Status
+
+- ✅ Contract Developed
+- ✅ Tests Passed
+- ✅ Deployed on Arc Testnet
+
+## Contract Address
+```text
+0xd879C42148B85D33D85ea431a4015d41a3847185
+```
 ## 📁 Project Structure
 ```
 arc-smart-contracts/
