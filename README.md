@@ -55,15 +55,16 @@ Status:
 - ✅ Deployed on Arc Testnet
 
 Contract Address
-```
-## 0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
+
+```text
+0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
 ```
 ---
-# 🪙 MyToken Contract
+## MyToken Contract
 
 A simple ERC20-like token built using Solidity and deployed on Arc Testnet.
 
-## Features
+### Features
 
 - Mint initial supply
 - Transfer tokens
@@ -93,14 +94,17 @@ arc-smart-contracts/
 ├── src/
 │   ├── Storage.sol
 │   └── Greeting.sol
+|   └── MyToken.sol
 │
 ├── script/
 │   ├── DeployStorage.s.sol
 │   └── DeployGreeting.s.sol
+|   └── DeployMyToken.s.sol
 │
 ├── test/
 │   ├── HelloArchitect.t.sol
 │   └── Greeting.t.sol
+|   └── MyToken.t.sol
 │
 ├── README.md
 └── foundry.toml
@@ -139,13 +143,13 @@ Completed
 
 - ✅ Storage Contract
 - ✅ Greeting Contract
+- ✅ ERC20 Token
 
 Coming Next
 
 - ⏳ Counter Contract
 - ⏳ Escrow Contract
 - ⏳ Vault Contract
-- ⏳ ERC20 Token
 - ⏳ ERC721 NFT
 - ⏳ Lottery
 - ⏳ MultiSig Wallet
