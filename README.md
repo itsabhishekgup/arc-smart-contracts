@@ -88,6 +88,39 @@ A simple ERC20-like token built using Solidity and deployed on Arc Testnet.
 ```text
 0xd879C42148B85D33D85ea431a4015d41a3847185
 ```
+---
+
+# 🖼️ BuilderNFT Contract
+
+A lightweight ERC-721-style NFT smart contract built with Solidity and deployed on Arc Testnet.
+
+## Features
+
+- NFT minting
+- Token ownership tracking
+- Token URI support
+- NFT transfers
+- Owner-only minting
+- Balance tracking
+- Automated Foundry tests
+
+## Tech Stack
+
+- Solidity ^0.8.20
+- Foundry
+- Arc Testnet
+
+## Status
+
+- ✅ Contract Developed
+- ✅ Tests Passed
+- ✅ Deployed on Arc Testnet
+
+## Contract Address
+
+```text
+0x527472c3dFA202aEfF206DC213AD9c6673E4345C
+```
 ## 📁 Project Structure
 ```
 arc-smart-contracts/
@@ -95,16 +128,19 @@ arc-smart-contracts/
 │   ├── Storage.sol
 │   └── Greeting.sol
 |   └── MyToken.sol
+|   └── BuilderNFT.sol
 │
 ├── script/
 │   ├── DeployStorage.s.sol
 │   └── DeployGreeting.s.sol
 |   └── DeployMyToken.s.sol
+|   └── DeployBuilderNFT.s.sol
 │
 ├── test/
 │   ├── HelloArchitect.t.sol
 │   └── Greeting.t.sol
 |   └── MyToken.t.sol
+|   └── BuilderNFT.t.sol
 │
 ├── README.md
 └── foundry.toml
@@ -144,13 +180,13 @@ Completed
 - ✅ Storage Contract
 - ✅ Greeting Contract
 - ✅ ERC20 Token
+- ✅ Builder NFT
 
 Coming Next
 
 - ⏳ Counter Contract
 - ⏳ Escrow Contract
 - ⏳ Vault Contract
-- ⏳ ERC721 NFT
 - ⏳ Lottery
 - ⏳ MultiSig Wallet
 - ⏳ Voting Contract
