@@ -1,30 +1,45 @@
 # Arc Smart Contracts
 
-A collection of smart contracts built on Arc Testnet using Solidity and Foundry as part of my Web3 builder journey.
+A growing collection of Solidity smart contracts built, tested, and deployed on **Arc Testnet** using **Foundry**.
+
+This repository is part of my hands-on Web3 builder journey. Each project follows a repeatable workflow:
+
+**Build → Test → Format → Deploy → Document → Commit**
 
 ---
 
-## About
+## 🚀 Overview
 
-This repository documents my progress as I learn and build smart contracts on Arc Testnet. Every project includes source code, deployment scripts, tests, and GitHub commits to showcase consistent development.
+The goal of this repository is to build practical smart-contract experience on Arc through multiple focused projects covering:
 
-My goal is to become a professional smart contract developer by building practical Web3 applications and improving with every project.
+- Solidity development
+- Foundry-based testing
+- Deployment scripts
+- Arc Testnet deployments
+- Git/GitHub version control
+- Technical documentation
 
----
-
-## Tech Stack
-
-- Solidity
-- Foundry
-- Arc Testnet
-- Git
-- GitHub
+The repository is intentionally evolving. New contracts and experiments will be added as the learning journey continues.
 
 ---
 
-# Smart Contracts
+## 🧩 Current Projects
 
-## ✅ Storage Contract
+| Project | What it demonstrates | Status |
+|---|---|---|
+| **Storage** | State variables, setters and getters | ✅ Tested & Deployed |
+| **Greeting** | State updates, reads and deployment workflow | ✅ Tested & Deployed |
+| **MyToken** | Custom ERC-20-like token mechanics, mint, burn and transfer | ✅ Tested & Deployed |
+| **BuilderNFT** | NFT-style ownership, minting, token URI and transfers | ✅ Tested & Deployed |
+| **ArcEscrow** | Token-based escrow with deposit, release and refund flow | ✅ Tested & Deployed |
+
+---
+
+# 📦 Smart Contracts
+
+## 1. Storage Contract
+
+A beginner-friendly contract used to learn Solidity state management fundamentals.
 
 ### Features
 
@@ -32,193 +47,435 @@ My goal is to become a professional smart contract developer by building practic
 - Update the stored number
 - Read the stored number
 
-Status:
+### Status
 
+- ✅ Developed
 - ✅ Tested
-- ✅ Built
+- ✅ Built with Foundry
 - ✅ Deployed on Arc Testnet
 
 ---
 
-## ✅ Greeting Contract
+## 2. Greeting Contract
+
+A simple contract for storing and updating a greeting message.
 
 ### Features
 
-- Store a greeting message
-- Read the greeting
+- Store a greeting
+- Read the current greeting
 - Update the greeting
 
-Status:
-
-- ✅ Tested
-- ✅ Built
-- ✅ Deployed on Arc Testnet
-
-Contract Address
+### Contract Address
 
 ```text
 0xF19155F26d26331C31C3D5B8E6bee68Aff1f9B2c5230
 ```
----
-## MyToken Contract
 
-A simple ERC20-like token built using Solidity and deployed on Arc Testnet.
+### Status
+
+- ✅ Developed
+- ✅ Tested
+- ✅ Built
+- ✅ Deployed on Arc Testnet
+
+---
+
+## 3. MyToken
+
+A lightweight **ERC-20-like learning implementation** written directly in Solidity.
+
+> This contract is intentionally educational and is not presented as a production-ready ERC-20 implementation.
 
 ### Features
 
-- Mint initial supply
-- Transfer tokens
-- Mint new tokens (Owner only)
-- Burn tokens
+- Token name and symbol
+- 18 decimals
+- Initial supply
 - Balance tracking
+- Token transfers
+- Owner-only minting
+- Token burning
+- Transfer events
 
-## Tech Stack
+### Token Details
 
-- Solidity ^0.8.20
-- Foundry
-- Arc Testnet
+```text
+Name:     Builder Token
+Symbol:   BLD
+Decimals: 18
+```
 
-## Status
+### Contract Address
 
-- ✅ Contract Developed
-- ✅ Tests Passed
-- ✅ Deployed on Arc Testnet
-
-## Contract Address
 ```text
 0xd879C42148B85D33D85ea431a4015d41a3847185
 ```
+
+### Status
+
+- ✅ Developed
+- ✅ Tests passed
+- ✅ Built
+- ✅ Deployed on Arc Testnet
+
 ---
 
-# 🖼️ BuilderNFT Contract
+## 4. BuilderNFT
 
-A lightweight ERC-721-style NFT smart contract built with Solidity and deployed on Arc Testnet.
+A lightweight **ERC-721-style learning contract** for understanding NFT fundamentals.
 
-## Features
+> This is a custom educational implementation and is not intended to claim full ERC-721 standard compliance.
+
+### Features
 
 - NFT minting
 - Token ownership tracking
-- Token URI support
+- Token URI storage
 - NFT transfers
 - Owner-only minting
 - Balance tracking
-- Automated Foundry tests
+- Incrementing token IDs
 
-## Tech Stack
-
-- Solidity ^0.8.20
-- Foundry
-- Arc Testnet
-
-## Status
-
-- ✅ Contract Developed
-- ✅ Tests Passed
-- ✅ Deployed on Arc Testnet
-
-## Contract Address
+### Contract Address
 
 ```text
 0x527472c3dFA202aEfF206DC213AD9c6673E4345C
 ```
-## 📁 Project Structure
+
+### Status
+
+- ✅ Developed
+- ✅ Tests passed
+- ✅ Built
+- ✅ Deployed on Arc Testnet
+
+---
+
+# 5. ArcEscrow
+
+A practical token-based escrow contract designed to demonstrate how funds can be held by a smart contract and released or refunded according to predefined rules.
+
+The contract uses three roles:
+
+- **Depositor** — funds the escrow
+- **Beneficiary** — receives funds on release
+- **Arbiter** — can authorize a refund
+
+### Escrow Flow
+
+```text
+Depositor
+   │
+   │ deposit()
+   ▼
+┌───────────────┐
+│   ArcEscrow   │
+│    Locked     │
+└───────────────┘
+   │         │
+   │         │
+release()   refund()
+   │         │
+   ▼         ▼
+Beneficiary  Depositor
 ```
+
+### Core Features
+
+- ERC-20 token based deposits
+- Single-deposit flow
+- Beneficiary-controlled release
+- Arbiter-controlled refund
+- Deposit/release/refund events
+- Role-based access checks
+- Zero-address validation
+- Duplicate-deposit protection
+- Explicit token-transfer success checks
+
+### Contract Address
+
+```text
+0xdB8A5392d3F5D6a28BDa2A9C09FcB20053a0575C
+```
+
+### Arc Testnet Configuration
+
+```text
+Network:   Arc Testnet
+Chain ID:  5042002
+RPC:       https://rpc.testnet.arc.network
+USDC:      0x3600000000000000000000000000000000000000
+```
+
+### Deployment Status
+
+- ✅ Contract developed
+- ✅ Foundry tests passed
+- ✅ Formatting/build completed
+- ✅ Deployment simulation completed successfully
+- ✅ Deployed on Arc Testnet
+- ✅ On-chain execution completed successfully
+
+### Deployment Gas
+
+The successful deployment used approximately:
+
+```text
+0.021727503 USDC
+```
+
+---
+
+# 🧪 Testing
+
+This repository uses **Foundry** for compilation, formatting, and automated testing.
+
+Run the full test suite:
+
+```bash
+forge test
+```
+
+Run tests with detailed traces:
+
+```bash
+forge test -vv
+```
+
+Format Solidity files:
+
+```bash
+forge fmt
+```
+
+Check formatting without modifying files:
+
+```bash
+forge fmt --check
+```
+
+Build the contracts:
+
+```bash
+forge build
+```
+
+---
+
+# 🛠️ Project Structure
+
+```text
 arc-smart-contracts/
 ├── src/
 │   ├── Storage.sol
-│   └── Greeting.sol
-|   └── MyToken.sol
-|   └── BuilderNFT.sol
+│   ├── Greeting.sol
+│   ├── MyToken.sol
+│   ├── BuilderNFT.sol
+│   └── ArcEscrow.sol
 │
 ├── script/
 │   ├── DeployStorage.s.sol
-│   └── DeployGreeting.s.sol
-|   └── DeployMyToken.s.sol
-|   └── DeployBuilderNFT.s.sol
+│   ├── DeployGreeting.s.sol
+│   ├── DeployMyToken.s.sol
+│   ├── DeployBuilderNFT.s.sol
+│   └── DeployArcEscrow.s.sol
 │
 ├── test/
 │   ├── HelloArchitect.t.sol
-│   └── Greeting.t.sol
-|   └── MyToken.t.sol
-|   └── BuilderNFT.t.sol
+│   ├── Greeting.t.sol
+│   ├── MyToken.t.sol
+│   ├── BuilderNFT.t.sol
+│   └── ArcEscrow.t.sol
 │
-├── README.md
-└── foundry.toml
+├── lib/
+├── foundry.toml
+├── .gitignore
+└── README.md
 ```
+
 ---
 
-# Run Locally
+# ⚙️ Local Development
 
-Clone the repository
+## 1. Clone
 
+```bash
 git clone https://github.com/itsabhishekgup/arc-smart-contracts.git
-Enter the project
-
 cd arc-smart-contracts
-Install dependencies
+```
 
+## 2. Install Dependencies
+
+```bash
 forge install
-Run tests
+```
 
-forge test
-Build contracts
+## 3. Build
 
+```bash
 forge build
-Deploy
+```
 
-forge create src/Greeting.sol:Greeting \
---rpc-url $ARC_TESTNET_RPC_URL \
---private-key $PRIVATE_KEY \
---broadcast
+## 4. Run Tests
+
+```bash
+forge test
+```
 
 ---
 
-# Learning Progress
+# 🌐 Arc Testnet
 
-Completed
+This repository currently targets **Arc Testnet**.
+
+```text
+Network:   Arc Testnet
+Chain ID:  5042002
+RPC URL:   https://rpc.testnet.arc.network
+Explorer:  https://testnet.arcscan.app
+```
+
+---
+
+# 🔐 Environment Variables
+
+Deployment credentials remain local and must never be committed to GitHub.
+
+Example:
+
+```env
+ARC_TESTNET_RPC_URL=https://rpc.testnet.arc.network
+PRIVATE_KEY=YOUR_PRIVATE_KEY
+```
+
+ArcEscrow deployment configuration:
+
+```env
+ARC_USDC_ADDRESS=0x3600000000000000000000000000000000000000
+ESCROW_BENEFICIARY=YOUR_PUBLIC_WALLET_ADDRESS
+ESCROW_ARBITER=YOUR_PUBLIC_WALLET_ADDRESS
+```
+
+### Security Rule
+
+**Never commit `PRIVATE_KEY` to GitHub.**
+
+Keep `.env` local and make sure it is covered by `.gitignore`.
+
+---
+
+# 🚀 Deployment Workflow
+
+The general Foundry deployment workflow used in this repository is:
+
+```text
+Write Contract
+      ↓
+Write Tests
+      ↓
+forge fmt
+      ↓
+forge test
+      ↓
+forge build
+      ↓
+Simulate Deployment
+      ↓
+Broadcast to Arc Testnet
+      ↓
+Record Contract Address
+      ↓
+Update README
+      ↓
+Commit & Push
+```
+
+Example ArcEscrow deployment:
+
+```bash
+forge script script/DeployArcEscrow.s.sol:DeployArcEscrow   --rpc-url "$ARC_TESTNET_RPC_URL"   --private-key "$PRIVATE_KEY"   --broadcast
+```
+
+---
+
+# 📈 Learning Progress
+
+### Completed
 
 - ✅ Storage Contract
 - ✅ Greeting Contract
-- ✅ ERC20 Token
-- ✅ Builder NFT
+- ✅ MyToken
+- ✅ BuilderNFT
+- ✅ ArcEscrow
+- ✅ Foundry testing workflow
+- ✅ Foundry formatting workflow
+- ✅ Arc Testnet deployments
+- ✅ GitHub version control
 
-Coming Next
+### Next Ideas
 
 - ⏳ Counter Contract
-- ⏳ Escrow Contract
 - ⏳ Vault Contract
-- ⏳ Lottery
-- ⏳ MultiSig Wallet
 - ⏳ Voting Contract
+- ⏳ MultiSig Wallet
+- ⏳ More advanced token standards
+- ⏳ Frontend integrations
+- ⏳ End-to-end dApp workflows
 
 ---
 
-# Goals
+# 🎯 Builder Goals
 
-- Learn Solidity fundamentals
-- Build production-style smart contracts
-- Master Foundry workflow
-- Deploy contracts on Arc Testnet
-- Maintain a professional GitHub portfolio
+The long-term goal of this repository is to move from Solidity fundamentals toward practical, production-oriented Web3 development.
+
+### Focus Areas
+
+- Strengthen Solidity fundamentals
+- Learn smart-contract security patterns
+- Build practical on-chain applications
+- Improve Foundry testing skills
+- Deploy consistently on Arc
+- Document every meaningful build
+- Grow a public builder portfolio
+- Connect contracts with usable frontend applications
 
 ---
 
-# Author
+# 📚 Development Philosophy
 
-Abhishek Gupta
+I am building this repository incrementally rather than trying to create everything at once.
 
-GitHub
+Each project is intended to answer a practical question:
+
+> **Can I build it, test it, deploy it, and explain how it works?**
+
+That approach turns individual experiments into a visible development track.
+
+---
+
+# 👤 Author
+
+**Abhishek Gupta**
+
+### GitHub
 
 https://github.com/itsabhishekgup
 
-X (Twitter)
+### X / Twitter
 
 https://x.com/itsabhishekgup
 
-LinkedIn
+### LinkedIn
 
 https://www.linkedin.com/in/abhishek-gupta-882352301/
 
 ---
 
-⭐ This repository is actively maintained as I continue building and learning on Arc Testnet.
+# ⭐ Repository Status
+
+This repository is actively maintained as I continue building and learning on **Arc Testnet**.
+
+New contracts, tests, deployment scripts, and experiments will be added as the project grows.
+
+**Built with Solidity + Foundry + Arc Testnet.**
