@@ -199,6 +199,15 @@ Beneficiary  Depositor
 0xdB8A5392d3F5D6a28BDa2A9C09FcB20053a0575C
 ```
 
+
+### 6. Crowdfunding
+
+- Contract: 0xe1E4147DBf4A1aFE6E00310572CD7788F394390B
+- Network: Arc Testnet
+- Chain ID: 5042002
+- Transaction: 0x3ab0f16a13ddc2d94a690253a6df5f743b26e5fbaf15647bbb893e423d4091dc
+- Features: Campaign creation, contributions, funding goals, deadlines, creator withdrawals, contributor refunds
+
 ### Arc Testnet Configuration
 
 ```text
